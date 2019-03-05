@@ -13,4 +13,10 @@ describe("Basic String and Math Operations", function(){
         let b = 2;
         expect(jsTest.combine(a, b)).to.equal(3);
     });
+    
+    it("rounds decimal numbers", function(){
+        let a = 2.1416;
+        let b = 1.716;
+        expect(jsTest.combine(a, b)).to.equal(4);
+    });
 });
