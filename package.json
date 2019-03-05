@@ -1,0 +1,15 @@
+{
+  "name": "js-example-tests",
+  "version": "1.0.0",
+  "description": "Practice tests for JavaScript for the Web Savvy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter nyan"
+  },
+  "author": "Brent Bartlett",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
