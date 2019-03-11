@@ -20,3 +20,9 @@ describe("Basic String and Math Operations", function(){
         expect(jsTest.combine(a, b)).to.equal(4);
     });
 });
+
+describe("Array Operations", function(){
+    it("returns an array", function(){
+        expect(jsTest.list()).to.be.an("Array");
+    });
+});

@@ -5,3 +5,8 @@ exports.combine = function(a, b){
         return a + " " + b;
     }
 };
+
+exports.list = function(){
+    var list = [];
+    return list;
+};
