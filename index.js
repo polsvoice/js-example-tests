@@ -6,7 +6,11 @@ exports.combine = function(a, b){
     }
 };
 
-exports.list = function(){
-    var list = [];
-    return list;
+exports.list = function(...args){
+    for (let i=0; i < args.length; i++){
+        if (typeof args[i] !== "string"){
+            return null;
+        }
+    }
+    return args;
 };
