@@ -43,4 +43,8 @@ describe("Array Operations", () => {
         expect(jsTest.list(false, "evil goose")).to.be.null;
         expect(jsTest.list([],"evil goose")).to.be.null;
     });
+    it("appends to an array", () => {
+        expect(jsTest.append("ex", "falso")).to.deep.equal(["ex", "falso"]);
+        expect(jsTest.append("quod", "libet")).to.deep.equal(["ex", "falso", "quod", "libet"]);
+    });
 });
