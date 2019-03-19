@@ -52,6 +52,8 @@ describe("Array Operations", () => {
 describe("Object Operations", () => {
     it("counts the number of times each letter appears in a sentence", () => {
         expect(jsTest.letterCounter("Superior Cyberwalls")).to.include({s:2, u:1, p:1, e:2, r:3, i:1, o:1, c:1, y:1, b:1, w:1, a:1, l:2});
+        expect(jsTest.letterCounter("Stimhack")).to.include({s:1, t:1, i:1, m:1, h:1, a:1, c:1, k:1});
+        expect(jsTest.letterCounter("Az McCaffrey: Mechanical Prodigy")).to.include({a:4, z:1, m:2, c:4, f:2, r:2, e:2, y:2, h:1, n:1, i:2, l:1, p:1, o:1, g:1});
     });
 });
 

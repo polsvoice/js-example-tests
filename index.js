@@ -1,5 +1,4 @@
 let myArray = [];
-exports.myArray = myArray;
 
 exports.combine = (a, b) => {
     if (typeof a == 'number' && typeof b == 'number'){
@@ -21,4 +20,17 @@ exports.list = (...args) => {
 exports.append = (...args) => {
     args.forEach((x) => myArray.push(x));
     return myArray;
+};
+
+exports.letterCounter = (string) => {
+    let ltrCount = {};
+    [...string].forEach((x) => {
+        x = x.toLowerCase();
+        if (ltrCount[x] === undefined){
+            ltrCount[x] = 1;
+        } else {
+            ltrCount[x]++;
+        }
+    });
+    return ltrCount;
 };
