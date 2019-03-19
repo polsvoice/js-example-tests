@@ -48,3 +48,10 @@ describe("Array Operations", () => {
         expect(jsTest.append("quod", "libet")).to.deep.equal(["ex", "falso", "quod", "libet"]);
     });
 });
+
+describe("Object Operations", () => {
+    it("counts the number of times each letter appears in a sentence", () => {
+        expect(jsTest.letterCounter("Superior Cyberwalls")).to.include({s:2, u:1, p:1, e:2, r:3, i:1, o:1, c:1, y:1, b:1, w:1, a:1, l:2});
+    });
+});
+
