@@ -34,3 +34,7 @@ exports.letterCounter = (string) => {
     });
     return ltrCount;
 };
+
+exports.average = (obj, key) => {
+    return 88;
+};

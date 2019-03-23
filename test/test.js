@@ -7,13 +7,13 @@ describe("Basic String and Math Operations", () => {
         let b = "among many.";
         expect(jsTest.combine(a, b)).to.equal("He was one among many.");
     });
-    
+
     it("adds two numbers together", () => {
         let a = 1;
         let b = 2;
         expect(jsTest.combine(a, b)).to.equal(3);
     });
-    
+
     it("rounds decimal numbers", () => {
         let a = 2.1416;
         let b = 1.716;
@@ -54,5 +54,22 @@ describe("Object Operations", () => {
         expect(jsTest.letterCounter("Superior Cyberwalls")).to.include({s:2, u:1, p:1, e:2, r:3, i:1, o:1, c:1, y:1, b:1, w:1, a:1, l:2});
         expect(jsTest.letterCounter("Stimhack")).to.include({s:1, t:1, i:1, m:1, h:1, a:1, c:1, k:1});
         expect(jsTest.letterCounter("Az McCaffrey: Mechanical Prodigy")).to.include({a:4, z:1, m:2, c:4, f:2, r:2, e:2, y:2, h:1, n:1, i:2, l:1, p:1, o:1, g:1});
+    });
+    it("calculates the average", () =>{
+        let intelligence = [
+            {
+                iq: 76,
+                name: "Fred"
+            },
+            {
+                iq: 80,
+                name: "Barney"
+            },
+            {
+                iq: 108,
+                name: "Wilma"
+            },
+        ];
+        expect(jsTest.average(intelligence, "iq")).to.equal(88);
     });
 });
