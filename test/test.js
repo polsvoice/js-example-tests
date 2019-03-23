@@ -32,16 +32,16 @@ describe("Array Operations", () => {
         expect(jsTest.list("mocha", "sushi", "nattou")).to.have.members(["nattou", "sushi", "mocha"]);
     });
     it("doesn't accept numbers", () => {
-        expect(jsTest.list(1, 7, 0, 2)).to.be.null;
+        expect(jsTest.list(1, 7, 0, 2)).to.be.false;
     });
     it("doesn't accept numbers anywhere in the list", () => {
-        expect(jsTest.list("arain", 2, "attercop")).to.be.null;
+        expect(jsTest.list("arain", 2, "attercop")).to.be.false;
     });
     it("doesn't accept other non-string values", () => {
-        expect(jsTest.list(undefined, "evil goose")).to.be.null;
-        expect(jsTest.list(NaN, "evil goose")).to.be.null;
-        expect(jsTest.list(false, "evil goose")).to.be.null;
-        expect(jsTest.list([],"evil goose")).to.be.null;
+        expect(jsTest.list(undefined, "evil goose")).to.be.false;
+        expect(jsTest.list(NaN, "evil goose")).to.be.false;
+        expect(jsTest.list(false, "evil goose")).to.be.false;
+        expect(jsTest.list([],"evil goose")).to.be.false;
     });
     it("appends to an array", () => {
         expect(jsTest.append("ex", "falso")).to.deep.equal(["ex", "falso"]);
@@ -56,4 +56,3 @@ describe("Object Operations", () => {
         expect(jsTest.letterCounter("Az McCaffrey: Mechanical Prodigy")).to.include({a:4, z:1, m:2, c:4, f:2, r:2, e:2, y:2, h:1, n:1, i:2, l:1, p:1, o:1, g:1});
     });
 });
-

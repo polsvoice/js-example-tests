@@ -11,7 +11,7 @@ exports.combine = (a, b) => {
 exports.list = (...args) => {
     for (let i=0; i < args.length; i++){
         if (typeof args[i] !== "string"){
-            return null;
+            return false;
         }
     }
     return args;
