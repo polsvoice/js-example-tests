@@ -55,7 +55,7 @@ describe("Object Operations", () => {
         expect(jsTest.letterCounter("Stimhack")).to.include({s:1, t:1, i:1, m:1, h:1, a:1, c:1, k:1});
         expect(jsTest.letterCounter("Az McCaffrey: Mechanical Prodigy")).to.include({a:4, z:1, m:2, c:4, f:2, r:2, e:2, y:2, h:1, n:1, i:2, l:1, p:1, o:1, g:1});
     });
-    it("calculates the average", () =>{
+    it("calculates the average", () => {
         let intelligence = [
             {
                 iq: 76,
@@ -70,6 +70,41 @@ describe("Object Operations", () => {
                 name: "Wilma"
             },
         ];
+        let income = [
+            {
+                amount: 72,
+                source: "eBay"
+            },
+            {
+                amount: 3500,
+                source: "job"
+            },
+            {
+                amount: 200,
+                source: "GoFundMe"
+            }
+        ];
         expect(jsTest.average(intelligence, "iq")).to.equal(88);
+        expect(jsTest.average(income, "amount")).to.equal(1257);
+    });
+    it("calculates the average and ignores objects without an amount", () => {
+        let cardStats = [
+            {
+                name: "Accelerated Beta Test"
+            },
+            {
+                name: "Accelerated Diagnostics",
+                influence: 1
+            },
+            {
+                name: "Adonis Campaign",
+                influence: 2
+            },
+            {
+                name: "Advanced Assembly Lines",
+                influence: 2
+            }
+        ];
+        expect(jsTest.average(cardStats, "influence")).to.equal(2);
     });
 });

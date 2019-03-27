@@ -36,5 +36,14 @@ exports.letterCounter = (string) => {
 };
 
 exports.average = (obj, key) => {
-    return 88;
+    let totalAmt = 0,
+        counter = 0;
+    for (let i = 0; i < obj.length; i++){
+        let item = obj[i];
+        if (item.hasOwnProperty(key)){
+            totalAmt = totalAmt + item[key];
+            counter++;
+        };
+    }
+    return Math.round(totalAmt / counter);
 };
